@@ -1,26 +1,53 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>首页 on 你的名字 - 游戏音频设计师</title>
-    <link>https://erraticer.github.io/</link>
-    <description>Recent content in 首页 on 你的名字 - 游戏音频设计师</description>
+    <title>  on Erraticer</title>
+    <link>http://localhost:1313/</link>
+    <description>Recent content in   on Erraticer</description>
     <generator>Hugo</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Fri, 27 Oct 2023 16:21:30 +0800</lastBuildDate>
-    <atom:link href="https://erraticer.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>作品集</title>
-      <link>https://erraticer.github.io/portfolio/</link>
-      <pubDate>Fri, 27 Oct 2023 16:21:30 +0800</pubDate>
-      <guid>https://erraticer.github.io/portfolio/</guid>
-      <description>&lt;h2 id=&#34;我的音频作品展示&#34;&gt;我的音频作品展示&lt;/h2&gt;&#xA;&lt;p&gt;这里将展示你的游戏音频作品。&lt;/p&gt;</description>
+      <title></title>
+      <link>http://localhost:1313/contact/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/contact/</guid>
+      <description>&lt;p&gt;空白的project&lt;/p&gt;</description>
     </item>
     <item>
-      <title>关于我</title>
-      <link>https://erraticer.github.io/about/</link>
-      <pubDate>Fri, 27 Oct 2023 16:21:30 +0800</pubDate>
-      <guid>https://erraticer.github.io/about/</guid>
-      <description>&lt;h2 id=&#34;游戏音频设计师&#34;&gt;游戏音频设计师&lt;/h2&gt;&#xA;&lt;p&gt;在这里写下你的个人介绍、专业背景和对游戏音频的热情。&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;专业技能：&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;游戏音频设计&lt;/li&gt;&#xA;&lt;li&gt;互动音乐作曲&lt;/li&gt;&#xA;&lt;li&gt;音效制作&lt;/li&gt;&#xA;&lt;li&gt;Wwise/FMOD 集成&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+      <title></title>
+      <link>http://localhost:1313/patchers-samples/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/patchers-samples/</guid>
+      <description>&lt;p&gt;空白的project&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/pedal-dev/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/pedal-dev/</guid>
+      <description>&lt;p&gt;空白的project&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/plugin-dev/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/plugin-dev/</guid>
+      <description>&lt;p&gt;空白的project&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/portfolio/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/portfolio/</guid>
+      <description>&lt;p&gt;content/portfolio/&lt;/p&gt;&#xA;&lt;p&gt;├── _index.md                      # 作品集首页&lt;/p&gt;&#xA;&lt;p&gt;├── granular-synth/                # 作品1&lt;/p&gt;&#xA;&lt;p&gt;│   ├── index.md&lt;/p&gt;&#xA;&lt;p&gt;│   └── preview.jpg&lt;/p&gt;&#xA;&lt;p&gt;├── fl-patcher-kit/                # 作品2&lt;/p&gt;&#xA;&lt;p&gt;│   ├── index.md&lt;/p&gt;&#xA;&lt;p&gt;│   └── preview.jpg&lt;/p&gt;&#xA;&lt;p&gt;├── hardware-pedal/                # 作品3&lt;/p&gt;&#xA;&lt;p&gt;│   ├── index.md&lt;/p&gt;&#xA;&lt;p&gt;│   └── preview.jpg&lt;/p&gt;&#xA;&lt;p&gt;└── ambient-pack/                  # 作品4&lt;/p&gt;&#xA;&lt;p&gt;    ├── index.md&lt;/p&gt;&#xA;&lt;p&gt;    └── preview.jpg&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/project/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/project/</guid>
+      <description>&lt;p&gt;空白的project&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
