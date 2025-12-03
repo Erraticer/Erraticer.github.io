@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <title>音乐播放器</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: transparent;
+            overflow: hidden;
+        }
+        .music-status {
+            color: white;
+            font-size: 12px;
+            padding: 5px;
+            background: rgba(0,0,0,0.7);
+        }
+    </style>
+</head>
+<body>
+    <audio id="bgMusic" loop>
+        <source src="/music/background.mp3" type="audio/mpeg">
+    </audio>
+    
+    <div class="music-status">
+        状态: <span id="statusText">加载中...</span>
+        <br>时间: <span id="timeText">0s</span>
+    </div>
+
+    <script>
+        const audio = document.getElementById('bgMusic');
+        const statusText = document.getElementById('statusText');
+        const timeText = document.getElementById('timeText');
+        
+        
+        audio.volume = 0.7;
+        audio.preload = "auto";
+        
+        
+        function restorePlaybackState() {
+            const savedTime = localStorage.getItem('musicCurrentTime');
+            const wasPlaying = localStorage.getItem('musicPlaying') === 'true';
+            
+            console.log('恢复状态:', { savedTime, wasPlaying });
+            
+            if (savedTime) {
+                audio.currentTime = parseFloat(savedTime);
+                timeText.textContent = Math.round(audio.currentTime) + 's';
+            }
+            
+            if (wasPlaying) {
+                audio.play().then(() => {
+                    statusText.textContent = "播放中 🔊";
+                }).catch(error => {
+                    statusText.textContent = "点击页面后播放";
+                });
+            } else {
+                statusText.textContent = "已暂停 🔇";
+            }
+        }
+        
+        
+        function savePlaybackState() {
+            localStorage.setItem('musicCurrentTime', audio.currentTime);
+            localStorage.setItem('musicPlaying', !audio.paused);
+        }
+        
+        
+        audio.addEventListener('loadedmetadata', () => {
+            restorePlaybackState();
+        });
+        
+        
+        setInterval(() => {
+            savePlaybackState();
+            timeText.textContent = Math.round(audio.currentTime) + 's';
+        }, 500);
+        
+        
+        window.addEventListener('message', (event) => {
+            if (event.data.type === 'play') {
+                audio.play().then(() => {
+                    statusText.textContent = "播放中 🔊";
+                    savePlaybackState();
+                });
+            } else if (event.data.type === 'pause') {
+                audio.pause();
+                statusText.textContent = "已暂停 🔇";
+                savePlaybackState();
+            } else if (event.data.type === 'volume') {
+                audio.volume = event.data.value;
+                statusText.textContent = `播放中 🔊 (${Math.round(event.data.value * 100)}%)`;
+            } else if (event.data.type === 'seek') {
+                audio.currentTime = event.data.time;
+                timeText.textContent = Math.round(audio.currentTime) + 's';
+            }
+        });
+        
+        
+        setTimeout(() => {
+            audio.play().then(() => {
+                statusText.textContent = "播放中 🔊";
+                savePlaybackState();
+            }).catch(error => {
+                statusText.textContent = "点击页面后播放";
+            });
+        }, 1000);
+        
+        
+        audio.addEventListener('play', () => {
+            statusText.textContent = "播放中 🔊";
+            savePlaybackState();
+        });
+        
+        audio.addEventListener('pause', () => {
+            statusText.textContent = "已暂停 🔇";
+            savePlaybackState();
+        });
+    </script>
+</body>
+</html>

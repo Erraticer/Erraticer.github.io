@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>  | Erraticer</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="欢迎来到我的音频小站
+这里是Erra！一名专注于音频设计的创作者。
+参与项目
+Patchers/Samples
+插件开发
+单块开发
+作品集
+联系Erra">
+    <meta name="generator" content="Hugo 0.152.2">
+    
+    
+    
+      <meta name="robots" content="noindex, nofollow">
+    
+    
+
+    
+<link rel="stylesheet" href="/ananke/css/main.min.css" >
+
+
+
+
+    
+
+
+    
+      
+
+    
+
+    
+
+    
+      <link rel="canonical" href="http://localhost:1313/music-player/">
+    
+
+    <meta property="og:url" content="http://localhost:1313/music-player/">
+  <meta property="og:site_name" content="Erraticer">
+  <meta property="og:title" content=" ">
+  <meta property="og:description" content="欢迎来到我的音频小站
+这里是Erra！一名专注于音频设计的创作者。
+参与项目
+Patchers/Samples
+插件开发
+单块开发
+作品集
+联系Erra">
+  <meta property="og:locale" content="zh_cn">
+  <meta property="og:type" content="article">
+
+  <meta itemprop="name" content=" ">
+  <meta itemprop="description" content="欢迎来到我的音频小站
+这里是Erra！一名专注于音频设计的创作者。
+参与项目
+Patchers/Samples
+插件开发
+单块开发
+作品集
+联系Erra">
+  <meta itemprop="wordCount" content="8">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content=" ">
+  <meta name="twitter:description" content="欢迎来到我的音频小站
+这里是Erra！一名专注于音频设计的创作者。
+参与项目
+Patchers/Samples
+插件开发
+单块开发
+作品集
+联系Erra">
+
+	<audio id="bgMusic" loop style="display: none;">
+  <source src="/music/background.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+class PersistentMusicPlayer {
+    constructor() {
+        this.audio = document.getElementById('bgMusic');
+        this.isInitialized = false;
+        this.init();
+    }
+
+    init() {
+        console.log('🎵 初始化持久化音乐播放器');
+        
+        
+        this.audio.volume = 0.7;
+        this.audio.preload = 'auto';
+        
+        
+        this.restorePlaybackState();
+        
+        
+        this.setupStateSaving();
+        
+        
+        this.startPlayback();
+    }
+
+    restorePlaybackState() {
+        try {
+            const savedTime = localStorage.getItem('musicCurrentTime');
+            const wasPlaying = localStorage.getItem('musicPlaying') === 'true';
+            const savedSrc = localStorage.getItem('musicSource');
+            const currentSrc = '/music/background.mp3';
+            
+            console.log('🔄 恢复播放状态:', { savedTime, wasPlaying, savedSrc, currentSrc });
+            
+            
+            if (savedSrc === currentSrc && savedTime) {
+                this.audio.currentTime = parseFloat(savedTime);
+                console.log('⏱️ 恢复播放位置:', savedTime, '秒');
+            }
+            
+            this.wasPlaying = wasPlaying;
+        } catch (error) {
+            console.log('❌ 恢复状态失败:', error);
+        }
+    }
+
+    setupStateSaving() {
+        
+        setInterval(() => {
+            this.savePlaybackState();
+        }, 500); 
+
+        
+        window.addEventListener('beforeunload', () => {
+            this.savePlaybackState();
+        });
+
+        
+        document.addEventListener('visibilitychange', () => {
+            if (document.hidden) {
+                this.savePlaybackState();
+            }
+        });
+    }
+
+    savePlaybackState() {
+        try {
+            localStorage.setItem('musicCurrentTime', this.audio.currentTime);
+            localStorage.setItem('musicPlaying', !this.audio.paused);
+            localStorage.setItem('musicSource', '/music/background.mp3');
+            
+            
+            if (Math.random() < 0.1) { 
+                console.log('💾 保存播放状态:', {
+                    time: this.audio.currentTime,
+                    playing: !this.audio.paused
+                });
+            }
+        } catch (error) {
+            console.log('❌ 保存状态失败:', error);
+        }
+    }
+
+    async startPlayback() {
+        try {
+            
+            if (this.wasPlaying) {
+                await this.audio.play();
+                console.log('✅ 恢复播放成功');
+            } else {
+                
+                await this.audio.play();
+                console.log('✅ 自动播放成功');
+            }
+            
+            this.isInitialized = true;
+            
+        } catch (error) {
+            console.log('❌ 播放失败，等待用户交互:', error);
+            
+            
+            const playOnInteraction = () => {
+                this.audio.play().then(() => {
+                    console.log('✅ 用户交互后播放成功');
+                }).catch(e => {
+                    console.log('❌ 用户交互后播放仍失败:', e);
+                });
+                
+                
+                document.removeEventListener('click', playOnInteraction);
+                document.removeEventListener('touchstart', playOnInteraction);
+                document.removeEventListener('keydown', playOnInteraction);
+            };
+            
+            document.addEventListener('click', playOnInteraction);
+            document.addEventListener('touchstart', playOnInteraction);
+            document.addEventListener('keydown', playOnInteraction);
+        }
+    }
+}
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    window.musicPlayer = new PersistentMusicPlayer();
+});
+
+
+setTimeout(() => {
+    const debugPanel = document.createElement('div');
+    debugPanel.style.cssText = `
+        position: fixed;
+        bottom: 10px;
+        left: 10px;
+        background: rgba(0,0,0,0.8);
+        color: white;
+        padding: 10px;
+        border-radius: 5px;
+        font-size: 12px;
+        z-index: 10000;
+        max-width: 300px;
+    `;
+    
+    debugPanel.innerHTML = `
+        <div>🎵 音乐调试</div>
+        <div id="musicStatus">初始化中...</div>
+        <button onclick="toggleMusic()" style="margin-top: 5px; padding: 2px 5px;">切换播放</button>
+    `;
+    
+    document.body.appendChild(debugPanel);
+    
+    
+    setInterval(() => {
+        const audio = document.getElementById('bgMusic');
+        if (audio) {
+            const status = document.getElementById('musicStatus');
+            status.innerHTML = `
+                状态: ${audio.paused ? '⏸️ 暂停' : '▶️ 播放'} <br>
+                进度: ${Math.round(audio.currentTime)}s <br>
+                保存时间: ${localStorage.getItem('musicCurrentTime')}s
+            `;
+        }
+    }, 1000);
+}, 1000);
+
+
+function toggleMusic() {
+    const audio = document.getElementById('bgMusic');
+    if (audio.paused) {
+        audio.play();
+    } else {
+        audio.pause();
+    }
+}
+</script>
+  </head><body class="ma0 avenir bg-near-white development">
+
+    
+   
+  
+
+  
+  
+  
+  <header class="cover bg-center" style="background-image: url('http://localhost:1313/cover.jpg');">
+    <div class="bg-black-60">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l center items-center justify-between">
+    <a href="/" class="f3 fw2 hover-white white-90 dib no-underline">
+      
+        <img src="/images/logo.png" class="w100 mw5-ns" alt="Erraticer" />
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+      <div class="ananke-socials"></div>
+
+    </div>
+  </div>
+</nav>
+
+      <div class="tc-l pv6 ph3 ph4-ns">
+        
+          <div class="f2 f1-l fw2 white-90 mb0 lh-title"> </div>
+          
+        
+      </div>
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  
+  <article class="flex-l mw8 center ph3 flex-wrap justify-between">
+    <header class="mt4 w-100">
+      <aside class="instapaper_ignoref b helvetica tracked ttu">
+          
+         
+      </aside><div id="sharing" class="mt3 ananke-socials"></div>
+<h1 class="f1 athelas mt3 mb1"> </h1>
+      
+      
+      
+
+      
+      
+    </header>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><p>欢迎来到我的音频小站</p>
+<p>这里是Erra！一名专注于音频设计的创作者。</p>
+<p><a href="/project">参与项目</a></p>
+<p><a href="/Patchers-Samples">Patchers/Samples</a></p>
+<p><a href="/plugin-dev">插件开发</a></p>
+<p><a href="/pedal-dev">单块开发</a></p>
+<p><a href="/portfolio">作品集</a></p>
+<p><a href="/contact">联系Erra</a></p>
+<ul class="pa0">
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+      
+      
+      </div>
+    </div>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white white-70 dn dib-ns pv2 ph3 no-underline" href="http://localhost:1313/" >
+    &copy;  Erraticer 2025 
+  </a>
+    <div><div class="ananke-socials"></div>
+</div>
+  </div>
+</footer>
+
+  </body>
+</html>
