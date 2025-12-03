@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>参与项目 on Erraticer</title>
+    <link>http://localhost:1313/project/</link>
+    <description>Recent content in 参与项目 on Erraticer</description>
+    <generator>Hugo</generator>
+    <language>zh-cn</language>
+    <atom:link href="http://localhost:1313/project/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Dasein</title>
+      <link>http://localhost:1313/project/dasein/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/project/dasein/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/project/dasein-thumbnail.jpg&#34; alt=&#34;图片&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;2025聚光灯gamejam【这难道真的不是bug吗】主题作品&lt;/p&gt;&#xA;&lt;p&gt;在这款解谜游戏中，你要主动利用内存越界访问漏洞来通关！5格内存就是你的全部武器——前两格是背包，后三格直接操控角色坐标与关卡编号。&lt;/p&gt;&#xA;&lt;p&gt;超量拾取物品，让背包溢出，修改你的坐标。走两步再丢弃，得到新的物品。在16个16x16的关卡中，巧妙制造bug：用数字溢出穿越墙壁、跨越高度，通过修改坐标获取关键道具，寻找的价值越界的角落，到达最终的隐藏关卡。&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://www.bilibili.com/video/BV1LLyZBeE9d/?share_source=copy_web&amp;amp;vd_source=4d96ab57c381c13b1314114ed93caced&#34;&gt;项目实机视频&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://tap.cn/lmWVjX9V6&#34;&gt;taptap项目链接&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>奇星求生记</title>
+      <link>http://localhost:1313/project/qxqsj/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/project/qxqsj/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/project/qxqsj.png&#34; alt=&#34;图片&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;中国传媒大学毕业设计作品&lt;/p&gt;&#xA;&lt;p&gt;《奇星求生记》是一款莫比斯风格的第一人称开放世界生存冒险RPG。&lt;/p&gt;&#xA;&lt;p&gt;玩家将扮演一名迫降在一颗奇异外星球的飞船上的船员，需要观察、探索、学习在这颗星球上遇到的一切事物，来战胜危险的外星生物并生存下去，最终寻找离开的方法或者在星球上建立家园。&lt;/p&gt;&#xA;&lt;p&gt;玩家在游戏中可以收集各种动植物、矿物资源，以高度自定义的方式来组装工具和武器，发挥它们的特性应对困难；同时需要建造营地，在孤独的外星球也有栖身之所&amp;hellip;&amp;hellip;&lt;/p&gt;&#xA;&lt;p&gt;玩家将通过勤劳的双手与创造力来征服外星生态。&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://www.bilibili.com/video/BV1Ba7HzQErj/?share_source=copy_web&amp;amp;vd_source=4d96ab57c381c13b1314114ed93caced&#34;&gt;宣传视频&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>奥术牌阵</title>
+      <link>http://localhost:1313/project/aspz/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/project/aspz/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/project/aspz.png&#34; alt=&#34;图片&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;开拓芯gamejam参赛作品，玩法为自走棋&lt;/p&gt;&#xA;&lt;p&gt;利用翻牌机制和构筑组建流派，成为策略赢家！&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>节奏勇者</title>
+      <link>http://localhost:1313/project/jzyz/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/project/jzyz/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/project/jzyz.jpg&#34; alt=&#34;图片&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;《节奏勇者》（BeatHero）是一款融合节奏消除、塔防策略、肉鸽构筑与动感电子乐的游戏。在霓虹闪烁的九宫格战场上，跟随节拍消除元素棋子，召唤炫目弹幕击退怪物狂潮！随机道具×动感电音，带来沉浸式迪斯科战斗体验!&lt;/p&gt;&#xA;&lt;p&gt;项目获得2025腾讯游戏创作大赛【全球高校赛道】优胜奖&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/project/jzyzaward.jpg&#34; alt=&#34;图片&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://store.steampowered.com/app/3985310?utm_source=bilibili1&amp;amp;utm_medium=video&amp;amp;utm_content=20250912&#34;&gt;steam商店链接&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://www.bilibili.com/video/BV1ufHrz6EFg/?share_source=copy_web&amp;amp;vd_source=4d96ab57c381c13b1314114ed93caced&#34;&gt;宣传视频&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

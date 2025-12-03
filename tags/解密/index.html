@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>解密 | Erraticer</title>
+    
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Source+Sans+Pro:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <style>
+         
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        :root {
+            --primary-color: #3b82f6;
+            --primary-dark: #1d4ed8;
+            --text-dark: #0f172a;
+            --text-medium: #334155;
+            --text-light: #64748b;
+            --border-color: #e2e8f0;
+            --bg-gradient: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+            --card-bg: rgba(255, 255, 255, 0.95);
+        }
+        
+        body {
+            font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            font-weight: 400;
+            line-height: 1.6;
+            background: var(--bg-gradient);
+            min-height: 100vh;
+            color: var(--text-medium);
+            padding-top: 80px;  
+        }
+        
+         
+        .fixed-navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(226, 232, 240, 0.8);
+            z-index: 1000;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            padding: 0;
+            transition: transform 0.3s ease;
+        }
+        
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 30px;
+            height: 80px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .nav-brand {
+            font-family: 'Inter', sans-serif;
+            font-weight: 700;
+            font-size: 1.8rem;
+            color: var(--text-dark);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            transition: color 0.3s ease;
+        }
+        
+        .nav-brand:hover {
+            color: var(--primary-color);
+        }
+        
+        .brand-icon {
+            font-size: 1.6rem;
+        }
+        
+        .main-nav {
+            display: flex;
+            gap: 35px;
+            align-items: center;
+        }
+        
+        .nav-item {
+            font-family: 'Inter', sans-serif;
+            font-weight: 500;
+            font-size: 1.05rem;
+            color: var(--text-light);
+            text-decoration: none;
+            padding: 10px 0;
+            position: relative;
+            transition: all 0.3s ease;
+            white-space: nowrap;
+        }
+        
+        .nav-item:hover {
+            color: var(--primary-color);
+        }
+        
+        .nav-item::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: var(--primary-color);
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+        
+        .nav-item:hover::after {
+            transform: scaleX(1);
+        }
+        
+        .nav-item.active {
+            color: var(--primary-color);
+        }
+        
+        .nav-item.active::after {
+            transform: scaleX(1);
+        }
+        
+         
+        .music-control {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: rgba(0, 0, 0, 0.85);
+            color: white;
+            padding: 12px 18px;
+            border-radius: 25px;
+            z-index: 10000;
+            cursor: pointer;
+            font-size: 14px;
+            font-family: 'Inter', sans-serif;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255,255,255,0.1);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            user-select: none;
+        }
+        
+        .music-control:hover {
+            background: rgba(0, 0, 0, 0.9);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(0,0,0,0.4);
+        }
+        
+        .music-icon {
+            font-size: 16px;
+        }
+        
+        .music-text {
+            font-weight: 500;
+        }
+        
+         
+        @media (max-width: 1100px) {
+            .nav-container {
+                padding: 0 20px;
+            }
+            
+            .main-nav {
+                gap: 25px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            body {
+                padding-top: 130px;
+            }
+            
+            .fixed-navbar {
+                padding: 10px 0;
+            }
+            
+            .nav-container {
+                flex-direction: column;
+                height: auto;
+                gap: 20px;
+                padding: 15px 20px;
+            }
+            
+            .main-nav {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 15px 25px;
+            }
+            
+            .nav-item {
+                font-size: 1rem;
+            }
+            
+             
+            .music-control {
+                bottom: 15px;
+                right: 15px;
+                padding: 10px 15px;
+                font-size: 13px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .main-nav {
+                gap: 12px 20px;
+            }
+            
+            .nav-item {
+                font-size: 0.95rem;
+            }
+            
+            .music-control {
+                bottom: 10px;
+                right: 10px;
+                padding: 8px 12px;
+            }
+        }
+        
+         
+        .main-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 30px;
+            min-height: calc(100vh - 160px);  
+        }
+        
+         
+        .site-footer {
+            background: white;
+            border-top: 1px solid var(--border-color);
+            padding: 40px 30px;
+            margin-top: 60px;
+        }
+        
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+            color: var(--text-light);
+        }
+        
+        .copyright {
+            margin-bottom: 15px;
+            font-size: 0.95rem;
+        }
+        
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            margin-top: 20px;
+        }
+        
+        .social-link {
+            color: var(--text-light);
+            text-decoration: none;
+            transition: color 0.3s ease;
+            font-size: 1.1rem;
+        }
+        
+        .social-link:hover {
+            color: var(--primary-color);
+        }
+        
+         
+        html {
+            scroll-behavior: smooth;
+        }
+        
+         
+        .fade-in {
+            animation: fadeIn 0.8s ease-out;
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+    
+    
+    
+</head>
+<body>
+    
+    <nav class="fixed-navbar">
+        <div class="nav-container">
+            <a href="/" class="nav-brand">
+                <span class="brand-icon">🎵</span>
+                <span>Erraticer</span>
+            </a>
+            
+            <div class="main-nav">
+                <a href="/" class="nav-item">首页</a>
+                <a href="/project" class="nav-item">参与项目</a>
+                <a href="/samples" class="nav-item">采样预制</a>
+                <a href="/plugin-dev" class="nav-item">插件开发</a>
+                <a href="/pedal-dev" class="nav-item">单块开发</a>
+            </div>
+        </div>
+    </nav>
+    
+    
+    <main class="main-content fade-in">
+        
+  <article class="cf pa3 pa4-m pa4-l">
+    <div class="measure-wide-l center f4 lh-copy nested-copy-line-height nested-links mid-gray">
+      <p>Below you will find pages that utilize the taxonomy term “解密”</p>
+    </div>
+  </article>
+  <div class="mw8 center">
+    <section class="flex-ns mt5 flex-wrap justify-around">
+      
+        <div class="w-100 mb4 relative bg-white">
+          <div class="w-100 mb4 nested-copy-line-height relative bg-white">
+  <div class="mb3 pa4 gray overflow-hidden bg-white">
+    <span class="f6 db">Projects</span>
+    <h1 class="f3 near-black">
+      <a href="/project/dasein/" class="link black dim">
+        Dasein
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      <p><img src="/images/plugin-dev/erraglitch.png" alt="ErraGlitch"></p>
+<p>2025聚光灯gamejam【这难道真的不是bug吗】主题作品</p>
+    </div>
+    <a href="/project/dasein/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
+  </div>
+</div>
+
+        </div>
+      
+    </section>
+  </div>
+
+    </main>
+    
+    
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="copyright">
+                <p>© 2025 Erraticer · 音频设计与开发</p>
+            </div>
+            <div class="social-links">
+                <a href="mailto:weixiaochaoren233@outlook.com" class="social-link">📧 邮箱</a>
+                <a href="https://github.com" class="social-link" target="_blank">🐙 GitHub</a>
+                <a href="https://soundcloud.com" class="social-link" target="_blank">🎧 SoundCloud</a>
+            </div>
+        </div>
+    </footer>
+    
+    
+    <div class="music-control" onclick="toggleMusic()">
+        <span class="music-icon" id="musicIcon">🔇</span>
+        <span class="music-text" id="musicText">播放音乐</span>
+    </div>
+    
+    
+    <iframe id="musicIframe" 
+            src="/music-host/" 
+            style="display: none; width: 0; height: 0; border: 0;"
+            allow="autoplay">
+    </iframe>
+    
+    
+    <script>
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            const currentPath = window.location.pathname;
+            const navItems = document.querySelectorAll('.nav-item');
+            
+            navItems.forEach(item => {
+                const itemPath = item.getAttribute('href');
+                if (currentPath === itemPath || 
+                    (currentPath === '/' && itemPath === '/') ||
+                    (currentPath === '' && itemPath === '/') ||
+                    currentPath.startsWith(itemPath + '/')) {
+                    item.classList.add('active');
+                }
+            });
+            
+            
+            let lastScrollTop = 0;
+            const navbar = document.querySelector('.fixed-navbar');
+            
+            window.addEventListener('scroll', function() {
+                const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                
+                if (scrollTop > lastScrollTop && scrollTop > 100) {
+                    
+                    navbar.style.transform = 'translateY(-100%)';
+                } else {
+                    
+                    navbar.style.transform = 'translateY(0)';
+                }
+                
+                lastScrollTop = scrollTop;
+            });
+            
+            
+            initMusicPlayer();
+        });
+        
+        
+        let musicPlaying = false;
+        const musicIframe = document.getElementById('musicIframe');
+        
+        function initMusicPlayer() {
+            
+            const wasPlaying = localStorage.getItem('musicPlaying') === 'true';
+            if (wasPlaying) {
+                setTimeout(() => {
+                    toggleMusic();
+                }, 1000); 
+            }
+            
+            
+            window.addEventListener('message', function(event) {
+                if (event.data.type === 'musicStatus') {
+                    if (event.data.playing !== undefined) {
+                        musicPlaying = event.data.playing;
+                        updateMusicUI();
+                    }
+                }
+            });
+            
+            
+            window.addEventListener('beforeunload', function() {
+                localStorage.setItem('musicPlaying', musicPlaying.toString());
+            });
+            
+            
+            document.addEventListener('visibilitychange', function() {
+                if (document.hidden) {
+                    localStorage.setItem('musicPlaying', musicPlaying.toString());
+                }
+            });
+        }
+        
+        function toggleMusic() {
+            if (!musicIframe.contentWindow) {
+                console.log('音乐播放器未加载');
+                return;
+            }
+            
+            if (musicPlaying) {
+                
+                musicIframe.contentWindow.postMessage({ type: 'pause' }, '*');
+            } else {
+                
+                musicIframe.contentWindow.postMessage({ type: 'play' }, '*');
+            }
+            
+            musicPlaying = !musicPlaying;
+            updateMusicUI();
+        }
+        
+        function updateMusicUI() {
+            const musicIcon = document.getElementById('musicIcon');
+            const musicText = document.getElementById('musicText');
+            
+            if (musicPlaying) {
+                musicIcon.textContent = '🔊';
+                musicText.textContent = '关闭音乐';
+            } else {
+                musicIcon.textContent = '🔇';
+                musicText.textContent = '播放音乐';
+            }
+        }
+        
+        
+        function changeVolume(volume) {
+            if (musicIframe.contentWindow) {
+                musicIframe.contentWindow.postMessage({ 
+                    type: 'volume', 
+                    value: volume / 100 
+                }, '*');
+            }
+        }
+    </script>
+    
+    
+    
+</body>
+</html>

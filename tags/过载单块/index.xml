@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>过载单块 on Erraticer</title>
+    <link>http://localhost:1313/tags/%E8%BF%87%E8%BD%BD%E5%8D%95%E5%9D%97/</link>
+    <description>Recent content in 过载单块 on Erraticer</description>
+    <generator>Hugo</generator>
+    <language>zh-cn</language>
+    <atom:link href="http://localhost:1313/tags/%E8%BF%87%E8%BD%BD%E5%8D%95%E5%9D%97/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>基于TS808的复刻过载</title>
+      <link>http://localhost:1313/pedal-dev/ts808/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/pedal-dev/ts808/</guid>
+      <description>&lt;p&gt;Ibanez TS808 Tube Screamer是历史上最经典、最具影响力的过载单块之一，自1979年问世以来，被无数吉他手奉为“过载音色的黄金标准”。它几乎定义了现代过载单块的声音理念，从布鲁斯、经典摇滚到现代金属和流行音乐，都烙印着它独特的音色哲学。&lt;/p&gt;&#xA;&lt;p&gt;TS808的过载本质上是温和的对称软削波，利用标志性的中频凸起电路和温和的高低频衰减，能做出温暖顺滑又极具穿透力的经典音色。将过载度（Drive） 旋钮开大时，TS808仍能保持出色的音符清晰度和动态响应，而将其音量（Level） 旋钮开大去驱动电子管音箱前级时，它则能激发出音箱本身饱满自然、富有歌唱性的饱和失真，这正是其“Tube Screamer”之名的精髓所在。&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>电声效果器 on Erraticer</title>
+    <link>http://localhost:1313/tags/%E7%94%B5%E5%A3%B0%E6%95%88%E6%9E%9C%E5%99%A8/</link>
+    <description>Recent content in 电声效果器 on Erraticer</description>
+    <generator>Hugo</generator>
+    <language>zh-cn</language>
+    <atom:link href="http://localhost:1313/tags/%E7%94%B5%E5%A3%B0%E6%95%88%E6%9E%9C%E5%99%A8/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>基于downsample算法的8bit效果器（研发中）</title>
+      <link>http://localhost:1313/pedal-dev/8bit/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/pedal-dev/8bit/</guid>
+      <description>&lt;p&gt;\\# 项目内容&lt;/p&gt;&#xA;&lt;p&gt;2025聚光灯gamejam【这难道真的不是bug】主题作品&lt;/p&gt;&#xA;&lt;p&gt;负责音效设计的&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

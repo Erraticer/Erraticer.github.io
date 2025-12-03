@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>单块开发 on Erraticer</title>
+    <link>http://localhost:1313/pedal-dev/</link>
+    <description>Recent content in 单块开发 on Erraticer</description>
+    <generator>Hugo</generator>
+    <language>zh-cn</language>
+    <atom:link href="http://localhost:1313/pedal-dev/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>基于downsample算法的8bit效果器（研发中）</title>
+      <link>http://localhost:1313/pedal-dev/8bit/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/pedal-dev/8bit/</guid>
+      <description>&lt;p&gt;基于downsample算法的8bit效果器&lt;/p&gt;&#xA;&lt;p&gt;技术难点：&lt;/p&gt;&#xA;&lt;p&gt;抗混叠（考虑在主处理模块前设计一个可选开启的低通滤波滤波）&lt;/p&gt;&#xA;&lt;p&gt;对于吉他/贝斯的适用性&lt;/p&gt;&#xA;&lt;p&gt;更多模块的集成&lt;/p&gt;&#xA;&lt;p&gt;截至2025/11/9 原型验证和电路设计中&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>基于RAT的复刻失真</title>
+      <link>http://localhost:1313/pedal-dev/rat/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/pedal-dev/rat/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/pedal-dev/rat.jpg&#34; alt=&#34;示例的图片&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;RAT（Pro Co Rat）是历史上最经典、最具影响力的失真/过载单块之一，自1978年问世以来，被无数吉他手用于各种音乐风格。主要应用于朋克、另类摇滚到重金属和独立音乐。&lt;/p&gt;&#xA;&lt;p&gt;RAT的失真本质上是削波，利用运放和滤波电路，能做出又饱满又“脏”，极具个性的声音，将失真度（Distortion） 旋钮开大时，RAT能产生非常猛烈、压缩感强、接近法兹边缘的饱和失真。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>基于TS808的复刻过载</title>
+      <link>http://localhost:1313/pedal-dev/ts808/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/pedal-dev/ts808/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/pedal-dev/ts808.jpg&#34; alt=&#34;示例的图片&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;Ibanez TS808 Tube Screamer是历史上最经典、最具影响力的过载单块之一，自1979年问世以来，被无数吉他手奉为“过载音色的黄金标准”。它几乎定义了现代过载单块的声音理念，从布鲁斯、经典摇滚到现代金属和流行音乐，都烙印着它独特的音色哲学。&lt;/p&gt;&#xA;&lt;p&gt;TS808的过载本质上是温和的对称软削波，利用标志性的中频凸起电路和温和的高低频衰减，能做出温暖顺滑又极具穿透力的经典音色。将过载度（Drive） 旋钮开大时，TS808仍能保持出色的音符清晰度和动态响应，而将其音量（Level） 旋钮开大去驱动电子管音箱前级时，它则能激发出音箱本身饱满自然、富有歌唱性的饱和失真，这正是其“Tube Screamer”之名的精髓所在。&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

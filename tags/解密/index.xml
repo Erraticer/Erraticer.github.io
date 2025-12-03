@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>解密 on Erraticer</title>
+    <link>http://localhost:1313/tags/%E8%A7%A3%E5%AF%86/</link>
+    <description>Recent content in 解密 on Erraticer</description>
+    <generator>Hugo</generator>
+    <language>zh-cn</language>
+    <atom:link href="http://localhost:1313/tags/%E8%A7%A3%E5%AF%86/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Dasein</title>
+      <link>http://localhost:1313/project/dasein/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/project/dasein/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/plugin-dev/erraglitch.png&#34; alt=&#34;ErraGlitch&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;2025聚光灯gamejam【这难道真的不是bug吗】主题作品&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

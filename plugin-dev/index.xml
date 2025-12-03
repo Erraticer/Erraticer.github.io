@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>插件开发 on Erraticer</title>
+    <link>http://localhost:1313/plugin-dev/</link>
+    <description>Recent content in 插件开发 on Erraticer</description>
+    <generator>Hugo</generator>
+    <language>zh-cn</language>
+    <atom:link href="http://localhost:1313/plugin-dev/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>基于图像处理的音频效果器（研发中）</title>
+      <link>http://localhost:1313/plugin-dev/%E5%9F%BA%E4%BA%8E%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86%E7%9A%84%E9%9F%B3%E9%A2%91%E5%A4%84%E7%90%86/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/plugin-dev/%E5%9F%BA%E4%BA%8E%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86%E7%9A%84%E9%9F%B3%E9%A2%91%E5%A4%84%E7%90%86/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/plugin-dev/soundpicture.png&#34; alt=&#34;示意图&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;声图转换→图像处理算法→图声逆转&lt;/p&gt;&#xA;&lt;p&gt;利用图像处理算法对图像做处理，再逆转，从而达成对音频的创意化处理&lt;/p&gt;&#xA;&lt;p&gt;目前的技术难点和考虑方向：&lt;/p&gt;&#xA;&lt;p&gt;如何有效存储音频的相位信息&lt;/p&gt;&#xA;&lt;p&gt;如何将图形信息的可修改方向与音频处理参数对应&lt;/p&gt;&#xA;&lt;p&gt;图形相位信息的相位恢复算法能否进行有机迁移&lt;/p&gt;&#xA;&lt;p&gt;🎸截至2025/11/03,已完成音频的图形化编码（仅编码），下图是效果图&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/plugin-dev/audiopicturewhite.jpg&#34; alt=&#34;示意图&#34;&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>故障效果器ErraGlitch</title>
+      <link>http://localhost:1313/plugin-dev/erraglitch/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/plugin-dev/erraglitch/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/plugin-dev/erraglitch.png&#34; alt=&#34;ErraGlitch&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;插件概述&lt;/p&gt;&#xA;&lt;p&gt;ErraGlitch 是一款专业的数字失真与比特压缩效果插件，集成了降采样处理、谐波&#xA;失真生成、精准EQ增强和动态削波技术。专为电子音乐制作人和声音设计师打造，&#xA;能够创造出独特的数字痕迹和故障艺术音效纹理。&lt;/p&gt;&#xA;&lt;p&gt;插件格式： VST2, VST3, 独立运行版本&lt;/p&gt;&#xA;&lt;p&gt;版本： 1.2.0&lt;/p&gt;&#xA;&lt;p&gt;开发者： Erraticer&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;http://localhost:1313/downloads/ErraGlitch.zip&#34;&gt;插件下载&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;http://localhost:1313/downloads/ErraGlitch.pdf&#34;&gt;文档下载&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://www.bilibili.com/video/BV13XpezsEFw/?share_source=copy_web&amp;amp;vd_source=4d96ab57c381c13b1314114ed93caced&#34;&gt;效果试听以及教程&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
