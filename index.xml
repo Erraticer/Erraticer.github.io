@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Erraticer</title>
+    <link>http://localhost:1313/</link>
+    <description>Recent content on Erraticer</description>
+    <generator>Hugo</generator>
+    <language>zh-cn</language>
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>schoo life sample pack（筹备中）</title>
+      <link>http://localhost:1313/samples/%E6%A0%A1%E5%9B%AD%E5%A3%B0%E9%9F%B3/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/samples/%E6%A0%A1%E5%9B%AD%E5%A3%B0%E9%9F%B3/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/samples/school.jpg&#34; alt=&#34;图片&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;预计筹备200+样本&lt;/p&gt;&#xA;&lt;p&gt;采录设备：索尼PCMD100&lt;/p&gt;&#xA;&lt;p&gt;各种来自中国校园的声音（采样于西北农林科技大学）&lt;/p&gt;&#xA;&lt;p&gt;&amp;ndash;各种具体场景的氛围声（体育场，教学楼，食堂，图书馆等）&lt;/p&gt;&#xA;&lt;p&gt;&amp;ndash;不同热闹程度的人群声&lt;/p&gt;&#xA;&lt;p&gt;&amp;ndash;铃声，钟声等校园内的特色声音&lt;/p&gt;&#xA;&lt;p&gt;&amp;ndash;不同时段和时节（上学，放学，特殊活动等）的群杂&lt;/p&gt;&#xA;&lt;p&gt;&amp;ndash;以及更多能在校园里听到的偶然声音（飞机飞过，建筑施工，割草等）&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/samples/school2.jpg&#34; alt=&#34;图片&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/samples/school6.jpg&#34; alt=&#34;图片&#34;&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>一键UI音效处理Patcher</title>
+      <link>http://localhost:1313/samples/ui%E9%9F%B3%E6%95%88%E8%AE%BE%E8%AE%A1/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/samples/ui%E9%9F%B3%E6%95%88%E8%AE%BE%E8%AE%A1/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/samples/uipatcher.png&#34; alt=&#34;图片&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;Patcher思路&lt;/p&gt;&#xA;&lt;p&gt;链路思路:sample输入→抬音头→截时长→调pitch→效果渲染→响度控制→输出&lt;/p&gt;&#xA;&lt;p&gt;具体使用的效果器见下图，用到了一些非fl自带的，相关的色彩处理可以使用fl内置的替代&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/samples/uipatcher2.png&#34; alt=&#34;图片&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;http://localhost:1313/downloads/uipatcher.zip&#34;&gt;Patcher下载&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://www.bilibili.com/video/BV1sphQz7EmT/?share_source=copy_web&amp;amp;vd_source=4d96ab57c381c13b1314114ed93caced&#34;&gt;效果试听&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>基于downsample算法的8bit效果器（研发中）</title>
+      <link>http://localhost:1313/pedal-dev/8bit/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/pedal-dev/8bit/</guid>
+      <description>&lt;p&gt;基于downsample算法的8bit效果器&lt;/p&gt;&#xA;&lt;p&gt;技术难点：&lt;/p&gt;&#xA;&lt;p&gt;抗混叠（考虑在主处理模块前设计一个可选开启的低通滤波滤波）&lt;/p&gt;&#xA;&lt;p&gt;对于吉他/贝斯的适用性&lt;/p&gt;&#xA;&lt;p&gt;更多模块的集成&lt;/p&gt;&#xA;&lt;p&gt;截至2025/11/9 原型验证和电路设计中&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>基于RAT的复刻失真</title>
+      <link>http://localhost:1313/pedal-dev/rat/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/pedal-dev/rat/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/pedal-dev/rat.jpg&#34; alt=&#34;示例的图片&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;RAT（Pro Co Rat）是历史上最经典、最具影响力的失真/过载单块之一，自1978年问世以来，被无数吉他手用于各种音乐风格。主要应用于朋克、另类摇滚到重金属和独立音乐。&lt;/p&gt;&#xA;&lt;p&gt;RAT的失真本质上是削波，利用运放和滤波电路，能做出又饱满又“脏”，极具个性的声音，将失真度（Distortion） 旋钮开大时，RAT能产生非常猛烈、压缩感强、接近法兹边缘的饱和失真。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>基于TS808的复刻过载</title>
+      <link>http://localhost:1313/pedal-dev/ts808/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/pedal-dev/ts808/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/pedal-dev/ts808.jpg&#34; alt=&#34;示例的图片&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;Ibanez TS808 Tube Screamer是历史上最经典、最具影响力的过载单块之一，自1979年问世以来，被无数吉他手奉为“过载音色的黄金标准”。它几乎定义了现代过载单块的声音理念，从布鲁斯、经典摇滚到现代金属和流行音乐，都烙印着它独特的音色哲学。&lt;/p&gt;&#xA;&lt;p&gt;TS808的过载本质上是温和的对称软削波，利用标志性的中频凸起电路和温和的高低频衰减，能做出温暖顺滑又极具穿透力的经典音色。将过载度（Drive） 旋钮开大时，TS808仍能保持出色的音符清晰度和动态响应，而将其音量（Level） 旋钮开大去驱动电子管音箱前级时，它则能激发出音箱本身饱满自然、富有歌唱性的饱和失真，这正是其“Tube Screamer”之名的精髓所在。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>基于图像处理的音频效果器（研发中）</title>
+      <link>http://localhost:1313/plugin-dev/%E5%9F%BA%E4%BA%8E%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86%E7%9A%84%E9%9F%B3%E9%A2%91%E5%A4%84%E7%90%86/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/plugin-dev/%E5%9F%BA%E4%BA%8E%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86%E7%9A%84%E9%9F%B3%E9%A2%91%E5%A4%84%E7%90%86/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/plugin-dev/soundpicture.png&#34; alt=&#34;示意图&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;声图转换→图像处理算法→图声逆转&lt;/p&gt;&#xA;&lt;p&gt;利用图像处理算法对图像做处理，再逆转，从而达成对音频的创意化处理&lt;/p&gt;&#xA;&lt;p&gt;目前的技术难点和考虑方向：&lt;/p&gt;&#xA;&lt;p&gt;如何有效存储音频的相位信息&lt;/p&gt;&#xA;&lt;p&gt;如何将图形信息的可修改方向与音频处理参数对应&lt;/p&gt;&#xA;&lt;p&gt;图形相位信息的相位恢复算法能否进行有机迁移&lt;/p&gt;&#xA;&lt;p&gt;🎸截至2025/11/03,已完成音频的图形化编码（仅编码），下图是效果图&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/plugin-dev/audiopicturewhite.jpg&#34; alt=&#34;示意图&#34;&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>故障效果器ErraGlitch</title>
+      <link>http://localhost:1313/plugin-dev/erraglitch/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/plugin-dev/erraglitch/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/plugin-dev/erraglitch.png&#34; alt=&#34;ErraGlitch&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;插件概述&lt;/p&gt;&#xA;&lt;p&gt;ErraGlitch 是一款专业的数字失真与比特压缩效果插件，集成了降采样处理、谐波&#xA;失真生成、精准EQ增强和动态削波技术。专为电子音乐制作人和声音设计师打造，&#xA;能够创造出独特的数字痕迹和故障艺术音效纹理。&lt;/p&gt;&#xA;&lt;p&gt;插件格式： VST2, VST3, 独立运行版本&lt;/p&gt;&#xA;&lt;p&gt;版本： 1.2.0&lt;/p&gt;&#xA;&lt;p&gt;开发者： Erraticer&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;http://localhost:1313/downloads/ErraGlitch.zip&#34;&gt;插件下载&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;http://localhost:1313/downloads/ErraGlitch.pdf&#34;&gt;文档下载&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://www.bilibili.com/video/BV13XpezsEFw/?share_source=copy_web&amp;amp;vd_source=4d96ab57c381c13b1314114ed93caced&#34;&gt;效果试听以及教程&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
